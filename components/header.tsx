@@ -4,18 +4,18 @@ import hus2 from "../public/hus2.png";
 const Header = () => {
   return (
     <header
-      className="flex justify-between items-center py-4 px-6 rounded-full shadow-md"
-      style={{ backgroundImage: `url(${hus2.src})`, backgroundSize: "cover" }} // Using hus2 as background
+      className="flex justify-between items-center py-1 px-2 rounded-full shadow-md"
+      style={{ backgroundImage: `url(${hus2.src})`, backgroundSize: "cover" }}
     >
       {/* Logo */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <Image
-          src="/house-icon.svg" // Replace with the file path to your icon
+          src="/hus2.png"
           alt="Bolig Invest AS logo"
-          width={40}
-          height={40}
+          width={200}
+          height={200}
         />
-        <span className="font-bold text-lg">Bolig Invest AS</span>
+        <span className="font-bold text-lg ml-40">Bolig Invest AS</span>
       </div>
 
       {/* Navigation */}
