@@ -26,25 +26,25 @@ const Header = () => {
         aria-label="Main navigation"
       >
         <Link
-          href="hjem"
+          href="/"
           className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
         >
           Hjem
         </Link>
         <Link
-          href="info"
+          href="/info"
           className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
         >
           Info
         </Link>
         <Link
-          href="prosjekter"
+          href="/prosjekter"
           className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
         >
           Prosjekter
         </Link>
         <Link
-          href="#kontakt-oss"
+          href="/kontakt-oss"
           className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
         >
           Kontakt Oss
