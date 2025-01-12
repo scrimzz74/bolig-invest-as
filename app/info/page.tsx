@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import { useEffect } from 'react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Info = () => {
     // Scroll animations
@@ -29,11 +30,11 @@ const Info = () => {
                 <title>Bolig Invest AS</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <div className="relative h-screen overflow-hidden snap-start">
+            <div className="relative h-screen overflow-hidden snap-start bg-gradient-to-b from-[#2D98EA] to-[#1A65B0]">
                 <iframe
                     src="https://www.youtube.com/embed/OSwxm9IlImI?autoplay=1&mute=1&loop=1&playlist=OSwxm9IlImI"
                     className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-                    allow="autoplay; loop; fullscreen"
+                    allow="autoplay; encrypted-media; fullscreen"
                     frameBorder="0"
                     title="Background Video"
                 ></iframe>
@@ -46,40 +47,60 @@ const Info = () => {
                     </p>
                 </div>
             </div>
-            <section className="bg-gradient-to-b from-[#2D98EA] to-blue-700 text-white py-20 snap-start fade-in">
+
+            <section className="bg-gradient-to-b from-[#2D98EA] to-[#1A65B0] text-white py-20 snap-start fade-in">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-4xl font-bold mb-10 text-center fade-in">
-                        Våre Tjenester
-                    </h2>
-                    <div className="text-center mt-6">
-                        <ul className="list-disc pl-8 text-lg text-left max-w-3xl mx-auto space-y-6 fade-in">
-                            <li>Kjøp og salg av eiendom</li>
-                            <li>Utleie og eiendomsforvaltning</li>
-                            <li>Investering og rådgivning</li>
-                        </ul>
+                    <h2 className="text-4xl font-extrabold text-center mb-12 text-white fade-in">Våre Tjenester</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                        <div className="flex flex-col items-center p-8 bg-white text-gray-800 rounded-xl shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+                            <h3 className="text-2xl font-semibold mb-4">Kjøp og salg av eiendom</h3>
+                            <p className="text-lg text-center">
+                                Vi hjelper deg med kjøp og salg av eiendom, enten du er førstegangskjøper eller erfaren investor.
+                            </p>
+                        </div>
+                        <div className="flex flex-col items-center p-8 bg-white text-gray-800 rounded-xl shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+                            <h3 className="text-2xl font-semibold mb-4">Utleie og eiendomsforvaltning</h3>
+                            <p className="text-lg text-center">
+                                Vår ekspertise innen utleie og forvaltning sikrer deg pålitelig og profesjonell service gjennom hele prosessen.
+                            </p>
+                        </div>
+                        <div className="flex flex-col items-center p-8 bg-white text-gray-800 rounded-xl shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+                            <h3 className="text-2xl font-semibold mb-4">Investering og rådgivning</h3>
+                            <p className="text-lg text-center">
+                                Vi gir grundig rådgivning og veiledning for investeringer i eiendom, slik at du kan gjøre informerte valg.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section className="bg-white py-20 snap-start fade-in">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-6xl font-bold mb-10 text-center fade-in">Vårt Team</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 fade-in">
-                        {['Prosjektleder', 'Byggeleder', 'Arkitekt', 'Ingeniør', 'Kundesupport'].map((role) => (
-                            <div
-                                key={role}
-                                className="flex flex-col items-center bg-gray-100 rounded-lg shadow-lg overflow-hidden w-72 h-72 transform hover:scale-105 transition duration-300"
-                            >
-                                <h3 className="text-xl font-semibold bg-black text-white w-full text-center py-4">
-                                    {role}
-                                </h3>
-                                <div className="flex-grow flex items-center justify-center bg-gray-300 w-full">
-                                    <span className="text-gray-500">Bilde kommer snart</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+
+            <section className="relative py-20 snap-start fade-in">
+                <div className="absolute inset-0 bg-gradient-to-b from-[#8B8C8C] to-[#2D98EA] z-0"></div>
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <h2 className="text-6xl font-bold mb-10 text-center text-white fade-in">Vårt Team</h2>
+                    <Carousel className="w-full">
+                        <CarouselContent>
+                            {['Prosjektleder', 'Byggeleder', 'Arkitekt', 'Ingeniør', 'Kundesupport'].map((role, index) => (
+                                <CarouselItem key={index}>
+                                    <div className="flex justify-center p-6">
+                                        <div className="flex flex-col items-center bg-white rounded-xl shadow-lg overflow-hidden w-[700px] h-[750px] transform hover:scale-105 transition duration-300 ease-in-out">
+                                            <h3 className="text-4xl font-semibold bg-black text-white w-full text-center py-8">
+                                                {role}
+                                            </h3>
+                                            <div className="flex-grow flex items-center justify-center bg-gray-200 w-full">
+                                                <span className="text-gray-500">Bilde kommer snart</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </div>
             </section>
+
             <style jsx global>{`
                 html {
                     scroll-behavior: smooth;
@@ -98,6 +119,9 @@ const Info = () => {
                 }
                 .text-shadow-lg {
                     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+                }
+                .carousel {
+                    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
                 }
             `}</style>
         </>
