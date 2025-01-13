@@ -13,63 +13,25 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="container">
-      <h1>Våre Prosjekter</h1>
-      <div className="projects-grid">
+    <div className="px-5 py-10">
+      <h1 className="text-4xl font-semibold text-left ml-20 relative inline-block mb-5">
+        Våre Prosjekter
+        <span className="absolute bottom-[-5px] left-0 block w-full h-[4px] bg-black"></span>
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ml-20">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <div className="project-image-placeholder"></div>
-            <h2>{project.title}</h2>
-            <p>Ferdigstilt {project.year}</p>
+          <div
+            key={index}
+            className="border border-gray-300 p-5 rounded-lg text-center bg-gray-100 overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <div className="w-full h-52 bg-gray-300 mb-5 transition-transform duration-300 hover:scale-110"></div>
+            <h2 className="text-xl font-semibold">{project.title}</h2>
+            <p className="text-gray-600">Ferdigstilt {project.year}</p>
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .container {
-          padding: 40px 20px;
-        }
-        .projects-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
-          margin-left: 10%; /* Flytter grid-containeren mot høyre */
-        }
-        .project-card {
-          border: 1px solid #ccc;
-          padding: 20px;
-          border-radius: 8px;
-          text-align: center;
-          background-color: #f9f9f9;
-        }
-        .project-image-placeholder {
-          width: 100%;
-          height: 200px;
-          background-color: #eee;
-          margin-bottom: 20px;
-        }
-        h1 {
-          text-align: left;  /* Endrer fra center til left */
-          font-size: 2.5rem;
-          margin-bottom: 20px;
-          position: relative;
-          display: inline-block;
-          margin-left: 10%;  /* Flytter overskriften til høyre */
-        }
-        h1::after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 4px;
-          background-color: black;
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-        }
-      `}</style>
     </div>
   );
 };
 
 export default ProjectsPage;
- 
