@@ -16,7 +16,7 @@ const ContactPage = () => {
       <h1 className="text-5xl text-center mb-5 text-blue-500">Kontakt oss</h1> {/* Increased the font size */}
       <form className="flex flex-col gap-5">
         <div className="flex flex-col gap-2">
-          <label htmlFor="fullName" className="text-gray-600">Full Name</label>
+          <label htmlFor="fullName" className="text-gray-600">Fullt Navn</label>
           <input
             type="text"
             id="fullName"
@@ -26,7 +26,7 @@ const ContactPage = () => {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="text-gray-600">Email Address</label>
+          <label htmlFor="email" className="text-gray-600">Email Adresse</label>
           <input
             type="email"
             id="email"
@@ -36,7 +36,7 @@ const ContactPage = () => {
           />
         </div>
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="details" className="text-gray-600">Project Details</label>
+          <label htmlFor="details" className="text-gray-600">Prosjekt Detaljer</label>
           <textarea
             id="details"
             name="details"
