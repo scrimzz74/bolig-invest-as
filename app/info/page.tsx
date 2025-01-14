@@ -37,12 +37,13 @@ const Info = () => {
       </Head>
       <div className="relative h-screen overflow-hidden snap-start bg-gradient-to-b from-[#2D98EA] to-[#1A65B0]">
         <iframe
-          src="https://www.youtube.com/embed/OSwxm9IlImI?autoplay=1&mute=1&loop=1&playlist=OSwxm9IlImI"
+          src="https://www.youtube.com/embed/OSwxm9IlImI?autoplay=1&mute=1&loop=1&playlist=OSwxm9IlImI&start=1"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           allow="autoplay; encrypted-media; fullscreen"
           frameBorder="0"
           title="Background Video"
         ></iframe>
+
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
           <h1 className="text-6xl md:text-8xl font-extrabold mb-6 fade-in">
             BOLIG INVEST AS
