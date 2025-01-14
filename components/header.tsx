@@ -27,27 +27,31 @@ const Header = () => {
       >
         <Link
           href="/"
-          className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
+          className="relative group text-lg md:text-xl text-gray-800 transition-transform transform hover:scale-105"
         >
           Hjem
+          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#2D98EA] transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link
           href="/info"
-          className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
+          className="relative group text-lg md:text-xl text-gray-800 transition-transform transform hover:scale-105"
         >
           Info
+          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#2D98EA] transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link
           href="/prosjekter"
-          className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
+          className="relative group text-lg md:text-xl text-gray-800 transition-transform transform hover:scale-105"
         >
           Prosjekter
+          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#2D98EA] transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link
           href="/kontakt-oss"
-          className="hover:underline hover:text-gray-600 transition-colors text-lg md:text-xl"
+          className="relative group text-lg md:text-xl text-gray-800 transition-transform transform hover:scale-105"
         >
           Kontakt Oss
+          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#2D98EA] transition-all duration-300 group-hover:w-full"></span>
         </Link>
       </nav>
 
