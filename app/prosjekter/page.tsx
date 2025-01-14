@@ -13,20 +13,26 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="px-5 py-10">
-      <h1 className="text-4xl font-semibold text-left ml-20 relative inline-block mb-5">
+    <div className="px-8 py-12 bg-gray-50 min-h-screen">
+      <h1 className="text-5xl font-bold text-center text-gray-800 relative inline-block mb-10 ml-12">
         Våre Prosjekter
-        <span className="absolute bottom-[-5px] left-0 block w-full h-[4px] bg-black"></span>
+        <span className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 block w-24 h-1 bg-blue-500"></span>
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 ml-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-7xl">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="border border-gray-300 p-5 rounded-lg text-center bg-gray-100 overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+            className="border border-gray-200 rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-xl hover:scale-105 transition-transform duration-300"
           >
-            <div className="w-full h-52 bg-gray-300 mb-5 transition-transform duration-300 hover:scale-110"></div>
-            <h2 className="text-xl font-semibold">{project.title}</h2>
-            <p className="text-gray-600">Ferdigstilt {project.year}</p>
+            <div className="w-full h-56 bg-gradient-to-r from-blue-300 to-blue-500 mb-4"></div>
+            <div className="p-6">
+              <h2 className="text-2xl font-semibold text-gray-700 mb-2">
+                {project.title}
+              </h2>
+              <p className="text-gray-500 text-lg">
+                Ferdigstilt {project.year}
+              </p>
+            </div>
           </div>
         ))}
       </div>
