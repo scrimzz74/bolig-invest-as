@@ -6,10 +6,10 @@ const ContactPage = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // Set to true once the component has mounted
+    setIsClient(true);
   }, []);
 
-  if (!isClient) return null; // Prevent server-side rendering mismatch
+  if (!isClient) return null;
 
   return (
     <div className="max-w-2xl mx-auto p-10 font-lalezar">
