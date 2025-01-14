@@ -16,7 +16,7 @@ export default function Home() {
       </main>
       <div className="absolute top-[700px] left-0 w-full">
         <Image
-          src="/mønster.png"
+          src="/Mønster.png"
           alt="mønster nede"
           width={1200}
           height={200}

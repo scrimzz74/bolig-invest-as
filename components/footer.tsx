@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0 flex items-center">
             <Link href="/" aria-label="Gå til hjem-siden" passHref>
               <Image
-                src="/hus.png"
+                src="/Hus.png"
                 alt="Bolig Invest AS logo"
                 width={100}
                 height={100}

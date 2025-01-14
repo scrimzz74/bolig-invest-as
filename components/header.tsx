@@ -8,7 +8,7 @@ const Header = () => {
       <div className="flex items-center gap-4 ml-16">
         <Link href="/" aria-label="Gå til hjem-siden" passHref>
           <Image
-            src="/hus.png"
+            src="/Hus.png"
             alt="Bolig Invest AS logo"
             width={100}
             height={100}
